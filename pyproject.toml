@@ -2,7 +2,7 @@
 name = "GTM_WAE"
 version = "0.1.0"
 description = "Official implementation of the custom WAE architecture guided by GTM"
-authors = ["Laboratoire de chémoinformatique <karinapikalyova@gmail.com>, <tagirshin@gmail.com>, <2alexeyorlov@gmail.com>, <varnek@unistra.fr>"]
+authors = ["Laboratoire de chemoinformatique <karinapikalyova@gmail.com>, <tagirshin@gmail.com>, <2alexeyorlov@gmail.com>, <varnek@unistra.fr>"]
 license = "MIT"
 readme = "README.md"
 packages = [
@@ -30,6 +30,39 @@ ipykernel = ">6"
 ipywidgets = ">8"
 
 
+
+[tool.pdm]
+[tool.pdm.build]
+includes = ["GTM_WAE"]
 [build-system]
 requires = ["poetry_core>=1.4.0"]
 build-backend = "poetry.core.masonry.api"
+
+[project]
+authors = [
+    {name = "Laboratoire de chemoinformatique", email = "2alexeyorlov@gmail.com"},
+]
+requires-python = "<3.11,>=3.10"
+dependencies = [
+    "tqdm==4.66.2",
+    "click==8.1.7",
+    "pickleshare==0.7.5",
+    "torchmetrics==1.4.0",
+    "numpy==1.26.4",
+    "pandas==2.2.1",
+    "pathlib==1.0.1",
+    "torch-optimizer==0.3.0",
+    "scipy==1.13.0",
+    "scikit-learn==1.4.2",
+    "biopython==1.83",
+    "pytorch-lightning==2.2.2",
+    "lovely-tensors>=0.1.18",
+    "modlamp==4.3.0",
+    "ipykernel>6",
+    "ipywidgets>8",
+]
+name = "GTM_WAE"
+version = "0.1.0"
+description = "Official implementation of the custom WAE architecture guided by GTM"
+readme = "README.md"
+license = {text = "MIT"}
